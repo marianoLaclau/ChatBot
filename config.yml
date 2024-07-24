@@ -2,9 +2,12 @@ language: "es"
 
 pipeline:
 - name: WhitespaceTokenizer
+  case_sensitive: False  # No distinguir entre mayúsculas y minúsculas
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
+  OOV_token: oov
+  token_pattern: (?u)\b\w+\b  # Para tratar palabras con acentos como una sola entidad
 - name: CountVectorsFeaturizer
   analyzer: "char_wb"
   min_ngram: 1

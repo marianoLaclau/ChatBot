@@ -41,8 +41,44 @@ class ActionProveerDia(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
+        # Obtener el día actual en inglés
         now = datetime.now()
         current_day = now.strftime("%A, %d de %B de %Y")
+
+        # Diccionarios para traducir días y meses
+        days_translation = {
+            "Monday": "Lunes",
+            "Tuesday": "Martes",
+            "Wednesday": "Miércoles",
+            "Thursday": "Jueves",
+            "Friday": "Viernes",
+            "Saturday": "Sábado",
+            "Sunday": "Domingo"
+        }
+        
+        months_translation = {
+            "January": "Enero",
+            "February": "Febrero",
+            "March": "Marzo",
+            "April": "Abril",
+            "May": "Mayo",
+            "June": "Junio",
+            "July": "Julio",
+            "August": "Agosto",
+            "September": "Septiembre",
+            "October": "Octubre",
+            "November": "Noviembre",
+            "December": "Diciembre"
+        }
+
+        # Traducir día y mes
+        for en, es in days_translation.items():
+            current_day = current_day.replace(en, es)
+        
+        for en, es in months_translation.items():
+            current_day = current_day.replace(en, es)
+
+        # Enviar la respuesta al usuario
         dispatcher.utter_message(text=f"Hoy es {current_day}.")
         return []
 

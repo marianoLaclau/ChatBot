@@ -47,6 +47,7 @@ nlu:
     - cuéntame más sobre lo que haces
     - ¿qué tipo de ayuda brindas?
     - ¿puedes explicarme tus funciones?
+    - que podes hacer?
 
 - intent: agradecer
   examples: |
@@ -98,10 +99,10 @@ nlu:
 
 - intent: preguntar_dia
   examples: |
-    - ¿qué día es hoy?
-    - ¿qué día es?
-    - ¿en qué día estamos?
-    - ¿qué es hoy?
+    - ¿que dia es hoy?
+    - ¿que dia es?
+    - ¿en que dia estamos?
+    - ¿que es hoy?
 
 - intent: enojarse
   examples: |
@@ -115,30 +116,30 @@ nlu:
 
 - intent: preguntar_nombre
   examples: |
-    - ¿cómo te llamas?
-    - ¿cuál es tu nombre?
+    - ¿como te llamas?
+    - ¿cual es tu nombre?
     - dime tu nombre
-    - ¿quién eres?
+    - ¿quien eres?
     - ¿me puedes decir tu nombre?
-    - ¿cómo te llamas tú?
+    - ¿cómo te llamas tu?
 
 - intent: preguntar_creador
   examples: |
-    - ¿quién te creó?
-    - ¿quién te hizo?
-    - ¿quién es tu creador?
-    - ¿quién desarrolló este bot?
-    - ¿quién te programó?
-    - ¿de quién eres creación?
+    - ¿quien te creo?
+    - ¿quien te hizo?
+    - ¿quien es tu creador?
+    - ¿quien desarrollo este bot?
+    - ¿quien te programo?
+    - ¿de quien eres creacion?
 
 - intent: preguntar_origen
   examples: |
-    - ¿de dónde vienes?
-    - ¿cuál es tu origen?
-    - ¿de dónde eres?
-    - ¿de qué país eres?
-    - ¿dónde fuiste creado?
-    - ¿dónde naciste?
+    - ¿de donde vienes?
+    - ¿cual es tu origen?
+    - ¿de donde eres?
+    - ¿de que pais eres?
+    - ¿donde fuiste creado?
+    - ¿donde naciste?
 
 - intent: expresar_alegria
   examples: |
@@ -150,6 +151,7 @@ nlu:
     - me siento feliz
     - estoy feliz 
     - soy feliz
+    - ya me seiento mejor
 
 - intent: expresar_tristeza
   examples: |
@@ -185,5 +187,16 @@ nlu:
     - te gusta [la musica clasica](mensaje)?
     - te gusta [nadar](mensaje)?
     - te gusta [trabajar aqui](mensaje)?
+    - preferis?
 
-    
+- intent: preguntar_opinion
+  examples: |
+    - que pensas?
+    - que te parece?
+    - que opinas?
+    - que podes decir?
+
+- synonym: buenos aires
+  examples: |
+    - bs as
+    - capital federal

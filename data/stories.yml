@@ -95,3 +95,8 @@ stories:
   steps:
   - intent: preguntar_gusto
   - action: utter_preguntar_gusto
+
+- story: preguntar opinion y rechazo
+  steps:
+  - intent: preguntar_opinion
+  - action: utter_preguntar_opinion

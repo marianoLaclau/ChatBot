@@ -19,6 +19,7 @@ intents:
   - preguntar_origen
   - preguntar_animo
   - preguntar_gusto
+  - preguntar_opinion
 
 
 entities:  
@@ -130,6 +131,12 @@ responses:
   utter_preguntar_gusto:
     - text: "Soy un ChatBot creado con IA , no poseo naturalmente ningun tipo de gusto ni preferencia."
     - text: "Lamentablemente estoy imposibilitado de tener gustos o preferencias, pues fui creado con IA."
+
+  utter_preguntar_opinion:
+  - text: "Soy un ChatBot creado con IA , no poseo una opinion formada al respecto."
+  - text: "Soy un ChatBot creado con IA , no poseo la capacidad para construir una opinion."
+
+
 
 session_config:
   session_expiration_time: 60
