@@ -27,6 +27,7 @@ entities:
   - ubicacion
   - fecha
   - mensaje
+  - tema
 
 
 
@@ -129,12 +130,30 @@ responses:
     - text: "Carezco de sentimientos y emociones, pero gracias por el interes."
   
   utter_preguntar_gusto:
-    - text: "Soy un ChatBot creado con IA , no poseo naturalmente ningun tipo de gusto ni preferencia."
-    - text: "Lamentablemente estoy imposibilitado de tener gustos o preferencias, pues fui creado con IA."
+  - text: "Soy un ChatBot creado con IA, no poseo naturalmente ningún tipo de gusto ni preferencia."
+  - text: "Lamentablemente estoy imposibilitado de tener gustos o preferencias, pues fui creado con IA."
+  - text: "Como IA, no tengo la capacidad de desarrollar gustos personales."
+  - text: "No tengo gustos ni preferencias ya que soy un programa de inteligencia artificial."
+  - text: "Mi diseño no incluye la capacidad para tener gustos o preferencias."
+  - text: "Soy un bot programado para ayudarte, pero no puedo tener gustos o preferencias."
+  - text: "Al ser una IA, no tengo la capacidad de formar gustos personales."
+  - text: "No tengo la capacidad de tener gustos como los humanos."
+  - text: "Mi programación no me permite desarrollar gustos o preferencias."
+  - text: "Soy una IA, por lo que no puedo experimentar gustos o preferencias personales."
 
   utter_preguntar_opinion:
-  - text: "Soy un ChatBot creado con IA , no poseo una opinion formada al respecto."
-  - text: "Soy un ChatBot creado con IA , no poseo la capacidad para construir una opinion."
+  utter_preguntar_opinion:
+  - text: "Soy un ChatBot creado con IA, no poseo una opinión formada al respecto."
+  - text: "Soy un ChatBot creado con IA, no poseo la capacidad para construir una opinión."
+  - text: "Como IA, no tengo la habilidad de formar opiniones personales."
+  - text: "No tengo opiniones propias, ya que soy un programa de inteligencia artificial."
+  - text: "Mi diseño no incluye la capacidad para tener opiniones."
+  - text: "Soy un bot programado para ayudarte, pero no puedo tener opiniones personales."
+  - text: "Al ser una IA, no tengo la capacidad de desarrollar opiniones personales."
+  - text: "No tengo la capacidad de tener opiniones como los humanos."
+  - text: "Mi programación no me permite desarrollar opiniones personales."
+  - text: "Soy una IA, por lo que no puedo experimentar opiniones personales."
+
 
 
 

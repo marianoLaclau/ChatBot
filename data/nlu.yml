@@ -191,10 +191,17 @@ nlu:
 
 - intent: preguntar_opinion
   examples: |
-    - que pensas?
-    - que te parece?
-    - que opinas?
-    - que podes decir?
+    - ¿qué piensas de [esto](tema)?
+    - ¿qué piensas sobre [este asunto](tema)?
+    - ¿qué te parece [la idea](tema)?
+    - ¿qué opinas de [la situación](tema)?
+    - ¿qué opinas sobre [este tema](tema)?
+    - ¿qué puedes decir de [esto](tema)?
+    - ¿qué puedes decir sobre [lo que ocurrió](tema)?
+    - me gustaría saber tu opinión sobre [algo](tema)
+    - ¿cuál es tu opinión sobre [esto](tema)?
+    - dame tu opinión sobre [este tema](tema)
+
 
 - synonym: buenos aires
   examples: |

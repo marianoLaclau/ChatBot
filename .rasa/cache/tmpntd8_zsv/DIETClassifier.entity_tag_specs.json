@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-fecha",
+      "2": "I-fecha",
+      "3": "L-fecha",
+      "4": "U-fecha",
+      "5": "B-mensaje",
+      "6": "I-mensaje",
+      "7": "L-mensaje",
+      "8": "U-mensaje",
+      "9": "B-nombre",
+      "10": "I-nombre",
+      "11": "L-nombre",
+      "12": "U-nombre",
+      "13": "B-tema",
+      "14": "I-tema",
+      "15": "L-tema",
+      "16": "U-tema",
+      "17": "B-ubicacion",
+      "18": "I-ubicacion",
+      "19": "L-ubicacion",
+      "20": "U-ubicacion",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-fecha": 1,
+      "I-fecha": 2,
+      "L-fecha": 3,
+      "U-fecha": 4,
+      "B-mensaje": 5,
+      "I-mensaje": 6,
+      "L-mensaje": 7,
+      "U-mensaje": 8,
+      "B-nombre": 9,
+      "I-nombre": 10,
+      "L-nombre": 11,
+      "U-nombre": 12,
+      "B-tema": 13,
+      "I-tema": 14,
+      "L-tema": 15,
+      "U-tema": 16,
+      "B-ubicacion": 17,
+      "I-ubicacion": 18,
+      "L-ubicacion": 19,
+      "U-ubicacion": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]
