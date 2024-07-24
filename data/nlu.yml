@@ -1,0 +1,189 @@
+version: "3.1"
+
+nlu:
+- intent: saludar
+  examples: |
+    - hola
+    - buenos días
+    - qué tal
+    - cómo estás
+    - buenas tardes
+    - buenas noches
+    - hey
+    - hola, ¿qué tal?
+    - saludos
+    - ¿cómo andas?
+
+- intent: despedirse
+  examples: |
+    - adiós
+    - hasta luego
+    - nos vemos
+    - bye
+    - hasta la próxima
+    - chau
+    - que tengas un buen día
+    - nos vemos luego
+    - cuídate
+    - hasta pronto
+
+- intent: informar
+  examples: |
+    - me llamo [Juan](nombre)
+    - mi nombre es [María](nombre)
+    - soy [Carlos](nombre)
+    - yo vivo en [Madrid](ubicacion)
+    - estaré en [Barcelona](ubicacion) mañana
+    - la cita es el [jueves](fecha)
+    - el evento es el [12 de octubre](fecha)
+    - nos reuniremos el [lunes](fecha)
+
+- intent: pedir_informacion
+  examples: |
+    - quiero saber más sobre tus servicios
+    - ¿puedes darme más información?
+    - ¿qué servicios ofreces?
+    - necesito información sobre tus productos
+    - cuéntame más sobre lo que haces
+    - ¿qué tipo de ayuda brindas?
+    - ¿puedes explicarme tus funciones?
+
+- intent: agradecer
+  examples: |
+    - gracias
+    - muchas gracias
+    - te lo agradezco
+    - mil gracias
+    - gracias por tu ayuda
+    - agradezco tu apoyo
+    - eso es muy útil, gracias
+
+- intent: negar
+  examples: |
+    - no
+    - no quiero
+    - no, gracias
+    - eso no es lo que quería
+    - de ninguna manera
+    - no necesito eso
+    - no estoy interesado
+
+- intent: afirmar
+  examples: |
+    - sí
+    - claro
+    - por supuesto
+    - definitivamente
+    - exacto
+    - así es
+    - correcto
+
+- intent: preguntar_hora
+  examples: |
+    - ¿qué hora es?
+    - ¿me puedes decir la hora?
+    - necesito saber la hora
+    - ¿tienes la hora?
+    - ¿qué hora tienes?
+    - dime la hora, por favor
+
+- intent: preguntar_clima
+  examples: |
+    - ¿cómo está el clima en [Buenos Aires](ubicacion)?
+    - ¿qué tiempo hace en [Córdoba](ubicacion)?
+    - ¿va a llover mañana en [Corrientes](ubicacion)?
+    - dime el clima para [mañana](fecha) en [Salta](ubicacion)
+    - ¿cuál es el pronóstico del tiempo para [hoy](fecha) en [Mendoza](ubicacion)?
+    - ¿va a hacer sol en [Gualeguaychú](ubicacion) el [sábado](fecha)?
+
+- intent: preguntar_dia
+  examples: |
+    - ¿qué día es hoy?
+    - ¿qué día es?
+    - ¿en qué día estamos?
+    - ¿qué es hoy?
+
+- intent: enojarse
+  examples: |
+    - esto es inaceptable
+    - estoy muy enojado
+    - no estoy contento con esto
+    - esto es una vergüenza
+    - estoy furioso
+    - no puedo creerlo
+    - estoy molesto
+
+- intent: preguntar_nombre
+  examples: |
+    - ¿cómo te llamas?
+    - ¿cuál es tu nombre?
+    - dime tu nombre
+    - ¿quién eres?
+    - ¿me puedes decir tu nombre?
+    - ¿cómo te llamas tú?
+
+- intent: preguntar_creador
+  examples: |
+    - ¿quién te creó?
+    - ¿quién te hizo?
+    - ¿quién es tu creador?
+    - ¿quién desarrolló este bot?
+    - ¿quién te programó?
+    - ¿de quién eres creación?
+
+- intent: preguntar_origen
+  examples: |
+    - ¿de dónde vienes?
+    - ¿cuál es tu origen?
+    - ¿de dónde eres?
+    - ¿de qué país eres?
+    - ¿dónde fuiste creado?
+    - ¿dónde naciste?
+
+- intent: expresar_alegria
+  examples: |
+    - estoy bien
+    - me siento bien
+    - hoy estoy bien
+    - estoy contento
+    - me siento contento
+    - me siento feliz
+    - estoy feliz 
+    - soy feliz
+
+- intent: expresar_tristeza
+  examples: |
+    - estoy mal
+    - me siento mal
+    - hoy estoy mal
+    - estoy triste
+    - me siento triste
+    - hoy estoy triste
+    - no estoy feliz 
+    - no soy feliz
+    - no me siento muy bien
+    - no me siento bien 
+
+- intent: preguntar_animo
+  examples: |
+    - como estas?
+    - como te sentis?
+    - como va ?
+    - como estas hoy?
+    - como te sentis hoy?
+    - estas bien?
+    - estas mal ?
+    - estas enojado?
+    - te enojaste?
+    - que tal ?
+
+- intent: preguntar_gusto
+  examples: |
+    - te gusta?
+    - te gusta [el cafe](mensaje)?
+    - te gusta [este libro](mensaje)?
+    - te gusta [la musica clasica](mensaje)?
+    - te gusta [nadar](mensaje)?
+    - te gusta [trabajar aqui](mensaje)?
+
+    

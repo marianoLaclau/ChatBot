@@ -1,0 +1,97 @@
+
+version: "3.1"
+
+stories:
+- story: saludo y despedida
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - intent: despedirse
+  - action: utter_despedirse
+
+- story: proporcionar nombre y pedir información
+  steps:
+  - intent: informar
+  - action: utter_informar_nombre
+  - intent: pedir_informacion
+  - action: action_proveer_informacion
+
+- story: agradecer y despedirse
+  steps:
+  - intent: agradecer
+  - action: utter_agradecer
+  - intent: despedirse
+  - action: utter_despedirse
+
+- story: negar y pedir información
+  steps:
+  - intent: negar
+  - action: utter_negar
+  - intent: pedir_informacion
+  - action: action_proveer_informacion
+
+- story: afirmar y preguntar hora
+  steps:
+  - intent: afirmar
+  - action: utter_affirmar
+  - intent: preguntar_hora
+  - action: action_proveer_hora
+
+- story: preguntar clima
+  steps:
+  - intent: preguntar_clima
+  - action: action_proveer_clima
+
+- story: enojarse y pedir información
+  steps:
+  - intent: enojarse
+  - action: utter_enojarse
+  - intent: pedir_informacion
+  - action: action_proveer_informacion
+
+- story: preguntar nombre del bot
+  steps:
+  - intent: preguntar_nombre
+  - action: utter_preguntar_nombre
+
+- story: preguntar creador del bot
+  steps:
+  - intent: preguntar_creador
+  - action: utter_preguntar_creador
+
+- story: preguntar origen del bot
+  steps:
+  - intent: preguntar_origen
+  - action: utter_preguntar_origen
+
+- story: preguntar dia actual
+  steps:
+  - intent: preguntar_dia
+  - action: action_proveer_dia
+
+- story: expresar tristeza y agardecer
+  steps:
+  - intent: expresar_tristeza
+  - action: utter_expresar_tristeza
+  - intent: agradecer
+  - action: utter_agradecer
+
+
+- story: expresar alegria y agardecer
+  steps:
+  - intent: expresar_alegria
+  - action: utter_expresar_alegria
+  - intent: agradecer
+  - action: utter_agradecer
+
+
+- story: preguntar animo y rechazo
+  steps:
+  - intent: preguntar_animo
+  - action: utter_preguntar_animo
+
+
+- story: preguntar gusto y rechazo
+  steps:
+  - intent: preguntar_gusto
+  - action: utter_preguntar_gusto

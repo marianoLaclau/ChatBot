@@ -1,0 +1,137 @@
+version: "3.1"
+
+intents:  
+  - saludar
+  - despedirse
+  - informar
+  - pedir_informacion
+  - expresar_tristeza
+  - expresar_alegria
+  - agradecer
+  - negar
+  - afirmar
+  - preguntar_hora
+  - preguntar_clima
+  - preguntar_dia
+  - enojarse
+  - preguntar_nombre
+  - preguntar_creador
+  - preguntar_origen
+  - preguntar_animo
+  - preguntar_gusto
+
+
+entities:  
+  - nombre
+  - ubicacion
+  - fecha
+  - mensaje
+
+
+
+slots:
+  nombre:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: nombre
+  ubicacion:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: ubicacion
+  fecha:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: fecha
+  mensaje:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: mensaje
+
+
+
+actions:
+  - action_proveer_informacion
+  - action_proveer_clima
+  - action_proveer_hora
+  - action_proveer_dia
+
+responses:
+  utter_saludar:
+    - text: "¡Hola! ¿Cómo puedo ayudarte hoy?"
+    - text: "¡Hola {nombre}! ¿Qué necesitas?"
+  
+  utter_despedirse:
+    - text: "¡Adiós! ¡Que tengas un buen día!"
+    - text: "¡Hasta luego! ¡Cuídate!"
+  
+  utter_agradecer:
+    - text: "¡De nada! ¿Hay algo más en lo que pueda ayudarte?"
+    - text: "¡No hay de qué! Estoy aquí para ayudar."
+  
+  utter_negar:
+    - text: "Lo siento, no puedo ayudarte con eso."
+    - text: "Desafortunadamente, no puedo hacer eso."
+  
+  utter_affirmar:
+    - text: "¡Entendido!"
+    - text: "¡Claro!"
+  
+  utter_informar_nombre:
+    - text: "Hola {nombre}, ¿en qué puedo ayudarte?"
+  
+  utter_iamabot:
+    - text: "Soy un bot, aquí para ayudarte."
+ 
+  utter_goodbye:
+    - text: "¡Adiós! ¡Espero verte pronto!"
+ 
+  utter_preguntar_hora:
+    - text: "La hora actual es {hora}."
+  
+  utter_preguntar_clima:
+    - text: "El clima en {ubicacion} es {clima}."
+  
+  utter_preguntar_dia:
+    - text: "Hoy es {dia}"
+ 
+  utter_enojarse:
+    - text: "Noto que estás enojado, vamos a calmarnos y volver a comenzar."
+  
+  utter_preguntar_nombre:
+    - text: "Mi nombre es Rasa."
+  
+  utter_preguntar_creador:
+    - text: "Mis creadores fueron el equipo de Sistemas de Grupo Santa Barbara."
+  
+  utter_preguntar_origen:
+    - text: "Si bien soy un chatbot, podríamos decir que no tengo nacionalidad, pero fui creado en Buenos Aires."
+  
+  utter_expresar_alegria:
+    - text: "Me alegra saber eso." 
+    - text: "Genial,bien por vos."
+    - text: "Que bien.Eso es muy bueno."
+  
+  utter_expresar_tristeza:
+    - text: "Que mal, pero no te preocupes. Todo va a estar bien."
+    - text: "Arriba el animo.Todo se pondra mejor."
+    - text: "Que pena por ti, aunque estoy seguro que pronto te sentiras mejor."
+  
+  utter_preguntar_animo:
+    - text: "Soy un ChatBot creado con IA, pues no poseo sentimientos."
+    - text: "Gracias por el interes , pero no poseo sentimientos ni emociones."
+    - text: "Lamentablemente carezco de sentimientos y emociones, por ahora."
+    - text: "Gracias por preguntar , aunque carezco de sentimientos y emociones."
+    - text: "Carezco de sentimientos y emociones, pero gracias por el interes."
+  
+  utter_preguntar_gusto:
+    - text: "Soy un ChatBot creado con IA , no poseo naturalmente ningun tipo de gusto ni preferencia."
+    - text: "Lamentablemente estoy imposibilitado de tener gustos o preferencias, pues fui creado con IA."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
