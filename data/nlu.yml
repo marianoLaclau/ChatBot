@@ -14,6 +14,7 @@ nlu:
     - saludos
     - ¿cómo andas?
 
+
 - intent: despedirse
   examples: |
     - adiós
@@ -27,16 +28,57 @@ nlu:
     - cuídate
     - hasta pronto
 
-- intent: informar
+- intent: informar_ubicacion
+  examples: |
+    - soy de [Buenos Aires](ubicacion)
+    - vivo en [córdoba](ubicacion)
+    - resido en [Mendoza](ubicacion)
+    - me encuentro en [rosario](ubicacion)
+    - estoy en [La Plata](ubicacion)
+    - actualmente estoy en [mar del Plata](ubicacion)
+    - me mudé a [Salta](ubicacion)
+    - soy originario de [tucumán](ubicacion)
+    - nací en [Neuquén](ubicacion)
+    - mi ciudad es [bariloche](ubicacion)
+    - estoy viviendo en [Ushuaia](ubicacion)
+    - vengo de [jujuy](ubicacion)
+    - me quedo en [San Juan](ubicacion)
+    - me trasladé a [chaco](ubicacion)
+    - ahora estoy en [Formosa](ubicacion)
+    - soy oriundo de [misiones](ubicacion)
+    - he pasado mucho tiempo en [Santa Cruz](ubicacion)
+    - me crié en [san Luis](ubicacion)
+    - trabajo en [Catamarca](ubicacion)
+    - estoy visitando [entre Ríos](ubicacion)
+    - estoy en un viaje a [Corrientes](ubicacion)
+    - mi hogar está en [santa fe](ubicacion)
+    - vivo temporalmente en [Tierra del Fuego](ubicacion)
+    - he estado viviendo en [la Rioja](ubicacion)
+    - actualmente resido en [Chubut](ubicacion)
+    - me he mudado recientemente a [río Negro](ubicacion)
+    - tengo mi casa en [San Fernando del Valle de Catamarca](ubicacion)
+    - paso mucho tiempo en [posadas](ubicacion)
+    - me encuentro frecuentemente en [Santiago del Estero](ubicacion)
+
+
+- intent: informar_nombre
   examples: |
     - me llamo [Juan](nombre)
     - mi nombre es [María](nombre)
     - soy [Carlos](nombre)
-    - yo vivo en [Madrid](ubicacion)
-    - estaré en [Barcelona](ubicacion) mañana
-    - la cita es el [jueves](fecha)
-    - el evento es el [12 de octubre](fecha)
-    - nos reuniremos el [lunes](fecha)
+    - me llamo [Pedro](nombre)
+    - mi nombre es [Laura](nombre)
+    - soy [Ana](nombre)
+    - me llamo [Luis](nombre)
+    - mi nombre es [Elena](nombre)
+    - soy [Miguel](nombre)
+    - me llamo [Sofía](nombre)
+    - mi nombre es [Andrés](nombre)
+    - soy [Mariano](nombre)
+    - me llamo [Mariano](nombre)
+    - mi nombre es [Abel](nombre)
+    - soy [Abel](nombre)
+    
 
 - intent: pedir_informacion
   examples: |
@@ -45,9 +87,9 @@ nlu:
     - ¿qué servicios ofreces?
     - necesito información sobre tus productos
     - cuéntame más sobre lo que haces
-    - ¿qué tipo de ayuda brindas?
     - ¿puedes explicarme tus funciones?
     - que podes hacer?
+
 
 - intent: agradecer
   examples: |
@@ -55,9 +97,9 @@ nlu:
     - muchas gracias
     - te lo agradezco
     - mil gracias
-    - gracias por tu ayuda
     - agradezco tu apoyo
     - eso es muy útil, gracias
+
 
 - intent: negar
   examples: |
@@ -69,6 +111,7 @@ nlu:
     - no necesito eso
     - no estoy interesado
 
+
 - intent: afirmar
   examples: |
     - sí
@@ -79,6 +122,7 @@ nlu:
     - así es
     - correcto
 
+
 - intent: preguntar_hora
   examples: |
     - ¿qué hora es?
@@ -88,14 +132,42 @@ nlu:
     - ¿qué hora tienes?
     - dime la hora, por favor
 
+
 - intent: preguntar_clima
   examples: |
     - ¿cómo está el clima en [Buenos Aires](ubicacion)?
     - ¿qué tiempo hace en [Córdoba](ubicacion)?
-    - ¿va a llover mañana en [Corrientes](ubicacion)?
-    - dime el clima para [mañana](fecha) en [Salta](ubicacion)
-    - ¿cuál es el pronóstico del tiempo para [hoy](fecha) en [Mendoza](ubicacion)?
-    - ¿va a hacer sol en [Gualeguaychú](ubicacion) el [sábado](fecha)?
+    - ¿cuál es el clima actual en [Rosario](ubicacion)?
+    - dime el clima en [Mendoza](ubicacion)
+    - ¿cómo está el tiempo en [Salta](ubicacion)?
+    - ¿qué clima hace ahora en [Mar del Plata](ubicacion)?
+    - quiero saber el clima en [La Plata](ubicacion)
+    - ¿cómo está el clima en [Tucumán](ubicacion)?
+    - ¿cuál es el clima en [Neuquén](ubicacion)?
+    - ¿cómo está el clima en [Formosa](ubicacion)?
+    - ¿qué clima hace hoy en [Jujuy](ubicacion)?
+    - dime el clima actual en [Santiago del Estero](ubicacion)
+    - ¿cómo está el tiempo en [Santa Fe](ubicacion)?
+    - quiero saber cómo está el clima en [San Juan](ubicacion)
+    - ¿qué tiempo hace en [Corrientes](ubicacion)?
+    - ¿cómo está el clima en [Misiones](ubicacion)?
+    - ¿cuál es el clima actual en [Chaco](ubicacion)?
+    - dime el clima en [San Luis](ubicacion)
+    - ¿qué clima hace ahora en [Catamarca](ubicacion)?
+    - ¿cómo está el clima en [Entre Ríos](ubicacion)?
+    - ¿qué tiempo hace en [La Rioja](ubicacion)?
+    - quiero saber el clima en [Río Negro](ubicacion)
+    - ¿cómo está el clima en [Chubut](ubicacion)?
+    - dime el clima actual en [Santa Cruz](ubicacion)
+    - ¿qué clima hace hoy en [Tierra del Fuego](ubicacion)?
+    - ¿cómo está el tiempo en [Salta](ubicacion)?
+    - ¿cuál es el clima en [Gualeguaychú](ubicacion)?
+    - ¿qué clima hace ahora en [Pergamino](ubicacion)?
+    - quiero saber el clima en [Bahía Blanca](ubicacion)
+    - ¿cómo está el clima en [Concordia](ubicacion)?
+    - ¿qué tiempo hace en [San Nicolás](ubicacion)?
+    - dime el clima actual en [Junín](ubicacion)
+
 
 - intent: preguntar_dia
   examples: |
@@ -103,6 +175,9 @@ nlu:
     - ¿que dia es?
     - ¿en que dia estamos?
     - ¿que es hoy?
+    - que fecha es ?
+    - que fecha es hoy?
+
 
 - intent: enojarse
   examples: |
@@ -114,14 +189,16 @@ nlu:
     - no puedo creerlo
     - estoy molesto
 
+
 - intent: preguntar_nombre
   examples: |
-    - ¿como te llamas?
+    - como te llamas?
     - ¿cual es tu nombre?
     - dime tu nombre
     - ¿quien eres?
     - ¿me puedes decir tu nombre?
     - ¿cómo te llamas tu?
+
 
 - intent: preguntar_creador
   examples: |
@@ -132,6 +209,7 @@ nlu:
     - ¿quien te programo?
     - ¿de quien eres creacion?
 
+
 - intent: preguntar_origen
   examples: |
     - ¿de donde vienes?
@@ -140,6 +218,7 @@ nlu:
     - ¿de que pais eres?
     - ¿donde fuiste creado?
     - ¿donde naciste?
+
 
 - intent: expresar_alegria
   examples: |
@@ -152,6 +231,7 @@ nlu:
     - estoy feliz 
     - soy feliz
     - ya me seiento mejor
+
 
 - intent: expresar_tristeza
   examples: |
@@ -166,6 +246,7 @@ nlu:
     - no me siento muy bien
     - no me siento bien 
 
+
 - intent: preguntar_animo
   examples: |
     - como estas?
@@ -179,6 +260,7 @@ nlu:
     - te enojaste?
     - que tal ?
 
+
 - intent: preguntar_gusto
   examples: |
     - te gusta?
@@ -188,6 +270,7 @@ nlu:
     - te gusta [nadar](mensaje)?
     - te gusta [trabajar aqui](mensaje)?
     - preferis?
+
 
 - intent: preguntar_opinion
   examples: |
@@ -201,6 +284,14 @@ nlu:
     - me gustaría saber tu opinión sobre [algo](tema)
     - ¿cuál es tu opinión sobre [esto](tema)?
     - dame tu opinión sobre [este tema](tema)
+
+
+- intent: informar_profesion
+  examples: |
+    - soy abogado
+    - soy ingeniero
+    - trabajo como doctor
+    - soy profesor
 
 
 - synonym: buenos aires

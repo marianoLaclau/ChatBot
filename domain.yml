@@ -3,17 +3,19 @@ version: "3.1"
 intents:  
   - saludar
   - despedirse
-  - informar
+  - informar_nombre
+  - informar_profesion
+  - informar_ubicacion
   - pedir_informacion
   - expresar_tristeza
   - expresar_alegria
+  - enojarse
   - agradecer
   - negar
   - afirmar
   - preguntar_hora
   - preguntar_clima
   - preguntar_dia
-  - enojarse
   - preguntar_nombre
   - preguntar_creador
   - preguntar_origen
@@ -22,37 +24,48 @@ intents:
   - preguntar_opinion
 
 
+
+
 entities:  
   - nombre
   - ubicacion
   - fecha
   - mensaje
   - tema
-
+  - profesion
 
 
 slots:
+  
   nombre:
     type: text
     mappings:
       - type: from_entity
         entity: nombre
+  
   ubicacion:
     type: text
     mappings:
       - type: from_entity
         entity: ubicacion
+ 
   fecha:
     type: text
     mappings:
       - type: from_entity
         entity: fecha
+  
   mensaje:
     type: text
     mappings:
       - type: from_entity
         entity: mensaje
 
+  profesion:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: profesion
 
 
 actions:
@@ -64,63 +77,122 @@ actions:
 responses:
   utter_saludar:
     - text: "¡Hola! ¿Cómo puedo ayudarte hoy?"
-    - text: "¡Hola {nombre}! ¿Qué necesitas?"
-  
+    - text: "¡Hola! ¿En qué te puedo ayudar?"
+    - text: "¡Buenas! ¿Qué necesitas?"
+    - text: "¡Hola! ¿Cómo estás?"
+    - text: "¡Hola! ¿Qué tal tu día?"
+
   utter_despedirse:
     - text: "¡Adiós! ¡Que tengas un buen día!"
     - text: "¡Hasta luego! ¡Cuídate!"
-  
+    - text: "¡Nos vemos pronto!"
+    - text: "¡Chau! ¡Cuídate!"
+    - text: "¡Hasta la próxima!"
+
   utter_agradecer:
-    - text: "¡De nada! ¿Hay algo más en lo que pueda ayudarte?"
+    - text: "¡De nada! Si precisas algo mas no dudes en consultarme."
     - text: "¡No hay de qué! Estoy aquí para ayudar."
-  
+    - text: "¡Con gusto! Mi trabajo es ayudar."
+    - text: "¡De nada!"
+    - text: "¡Por nada ,para eso estoy!"
+
   utter_negar:
-    - text: "Lo siento, no puedo ayudarte con eso."
-    - text: "Desafortunadamente, no puedo hacer eso."
-  
-  utter_affirmar:
+    - text: "Ok. Si puedo ayudarte con algo mas dimelo."
+    - text: "Bien.Si hay algo más en lo que pueda colaborar hazmelo saber."
+    - text: "Bien,comprendo.Aqui sigo por cualquier otra consulta."
+    - text: "Ok.Entiendo.Aqui sigo para cualquier consulta."
+
+  utter_afirmar:
     - text: "¡Entendido!"
     - text: "¡Claro!"
-  
+    - text: "¡Por supuesto!"
+    - text: "¡Definitivamente!"
+    - text: "¡Sí, seguro!"
+
   utter_informar_nombre:
     - text: "Hola {nombre}, ¿en qué puedo ayudarte?"
-  
+    - text: "¡Hola {nombre}! ¿Qué necesitas?"
+    - text: "¡Hola {nombre}! ¿Cómo puedo asistirte hoy?"
+    - text: "¡Hola {nombre}! ¿En qué puedo ser de ayuda?"
+    - text: "¡Hola {nombre}! ¿Cómo estás?"
+
   utter_iamabot:
     - text: "Soy un bot, aquí para ayudarte."
- 
+    - text: "Soy un asistente virtual, ¿en qué puedo ayudarte?"
+    - text: "Soy un chatbot diseñado para asistirte."
+    - text: "Soy un bot de asistencia, ¿qué necesitas?"
+    - text: "Soy un asistente virtual, ¿cómo puedo ayudarte hoy?"
+
   utter_goodbye:
     - text: "¡Adiós! ¡Espero verte pronto!"
- 
+    - text: "¡Hasta la próxima!"
+    - text: "¡Chau! ¡Cuídate!"
+    - text: "¡Nos vemos pronto!"
+    - text: "¡Adiós! ¡Que tengas un buen día!"
+
   utter_preguntar_hora:
     - text: "La hora actual es {hora}."
-  
+    - text: "Ahora son las {hora}."
+    - text: "La hora es {hora}."
+    - text: "Son las {hora} en este momento."
+    - text: "La hora exacta es {hora}."
+
   utter_preguntar_clima:
     - text: "El clima en {ubicacion} es {clima}."
-  
+    - text: "En {ubicacion}, el clima es {clima}."
+    - text: "Actualmente, en {ubicacion}, el clima es {clima}."
+    - text: "El tiempo en {ubicacion} es {clima}."
+    - text: "En {ubicacion} está {clima}."
+
   utter_preguntar_dia:
     - text: "Hoy es {dia}"
- 
+    - text: "El día de hoy es {dia}"
+    - text: "Estamos a {dia}"
+    - text: "La fecha de hoy es {dia}"
+    - text: "Hoy es {dia}, por si te lo preguntabas."
+
   utter_enojarse:
     - text: "Noto que estás enojado, vamos a calmarnos y volver a comenzar."
-  
+    - text: "Parece que estás molesto, hablemos con calma."
+    - text: "Entiendo tu enojo, tratemos de resolverlo juntos."
+    - text: "Veo que estás enojado, vamos a calmarnos y buscar una solución."
+    - text: "Lamento que estés enojado, hablemos con tranquilidad."
+
   utter_preguntar_nombre:
     - text: "Mi nombre es Rasa."
-  
+    - text: "Puedes llamarme Rasa."
+    - text: "Soy Rasa, tu asistente virtual."
+    - text: "Me llamo Rasa."
+    - text: "Soy conocido como Rasa."
+
   utter_preguntar_creador:
     - text: "Mis creadores fueron el equipo de Sistemas de Grupo Santa Barbara."
-  
+    - text: "Fui desarrollado por el equipo de Sistemas de Grupo Santa Barbara."
+    - text: "El equipo de Sistemas de Grupo Santa Barbara me creó."
+    - text: "Soy una creación del equipo de Sistemas de Grupo Santa Barbara."
+    - text: "Fui hecho por el equipo de Sistemas de Grupo Santa Barbara."
+
   utter_preguntar_origen:
     - text: "Si bien soy un chatbot, podríamos decir que no tengo nacionalidad, pero fui creado en Buenos Aires."
-  
+    - text: "Fui desarrollado en Buenos Aires, aunque no tengo nacionalidad."
+    - text: "No tengo nacionalidad, pero mi desarrollo se hizo en Buenos Aires."
+    - text: "Mi creación tuvo lugar en Buenos Aires, aunque no tengo una nacionalidad específica."
+    - text: "Nací en Buenos Aires, aunque soy un chatbot sin nacionalidad."
+
   utter_expresar_alegria:
-    - text: "Me alegra saber eso." 
-    - text: "Genial,bien por vos."
-    - text: "Que bien.Eso es muy bueno."
-  
+    - text: "Me alegra saber eso."
+    - text: "¡Genial, bien por ti!"
+    - text: "¡Qué bien, eso es muy bueno!"
+    - text: "¡Me alegro mucho por ti!"
+    - text: "¡Fantástico, me alegra oír eso!"
+
   utter_expresar_tristeza:
-    - text: "Que mal, pero no te preocupes. Todo va a estar bien."
-    - text: "Arriba el animo.Todo se pondra mejor."
-    - text: "Que pena por ti, aunque estoy seguro que pronto te sentiras mejor."
+    - text: "Qué mal, pero no te preocupes. Todo va a estar bien."
+    - text: "Ánimo, todo se pondrá mejor."
+    - text: "Qué pena, pero estoy seguro que pronto te sentirás mejor."
+    - text: "Lamento oír eso, pero estoy aquí para ayudarte."
+    - text: "Lo siento mucho, pero recuerda que siempre hay luz al final del túnel."
+
   
   utter_preguntar_animo:
     - text: "Soy un ChatBot creado con IA, pues no poseo sentimientos."
@@ -130,34 +202,58 @@ responses:
     - text: "Carezco de sentimientos y emociones, pero gracias por el interes."
   
   utter_preguntar_gusto:
-  - text: "Soy un ChatBot creado con IA, no poseo naturalmente ningún tipo de gusto ni preferencia."
-  - text: "Lamentablemente estoy imposibilitado de tener gustos o preferencias, pues fui creado con IA."
-  - text: "Como IA, no tengo la capacidad de desarrollar gustos personales."
-  - text: "No tengo gustos ni preferencias ya que soy un programa de inteligencia artificial."
-  - text: "Mi diseño no incluye la capacidad para tener gustos o preferencias."
-  - text: "Soy un bot programado para ayudarte, pero no puedo tener gustos o preferencias."
-  - text: "Al ser una IA, no tengo la capacidad de formar gustos personales."
-  - text: "No tengo la capacidad de tener gustos como los humanos."
-  - text: "Mi programación no me permite desarrollar gustos o preferencias."
-  - text: "Soy una IA, por lo que no puedo experimentar gustos o preferencias personales."
+    - text: "Soy un ChatBot creado con IA, no poseo naturalmente ningún tipo de gusto ni preferencia."
+    - text: "Lamentablemente estoy imposibilitado de tener gustos o preferencias, pues fui creado con IA."
+    - text: "Como IA, no tengo la capacidad de desarrollar gustos personales."
+    - text: "No tengo gustos ni preferencias ya que soy un programa de inteligencia artificial."
+    - text: "Mi diseño no incluye la capacidad para tener gustos o preferencias."
+    - text: "Soy un bot programado para ayudarte, pero no puedo tener gustos o preferencias."
+    - text: "Al ser una IA, no tengo la capacidad de formar gustos personales."
+    - text: "No tengo la capacidad de tener gustos como los humanos."
+    - text: "Mi programación no me permite desarrollar gustos o preferencias."
+    - text: "Soy una IA, por lo que no puedo experimentar gustos o preferencias personales."
 
 
   utter_preguntar_opinion:
-  - text: "Soy un ChatBot creado con IA, no poseo una opinión formada al respecto."
-  - text: "Soy un ChatBot creado con IA, no poseo la capacidad para construir una opinión."
-  - text: "Como IA, no tengo la habilidad de formar opiniones personales."
-  - text: "No tengo opiniones propias, ya que soy un programa de inteligencia artificial."
-  - text: "Mi diseño no incluye la capacidad para tener opiniones."
-  - text: "Soy un bot programado para ayudarte, pero no puedo tener opiniones personales."
-  - text: "Al ser una IA, no tengo la capacidad de desarrollar opiniones personales."
-  - text: "No tengo la capacidad de tener opiniones como los humanos."
-  - text: "Mi programación no me permite desarrollar opiniones personales."
-  - text: "Soy una IA, por lo que no puedo experimentar opiniones personales."
+    - text: "Soy un ChatBot creado con IA, no poseo una opinión formada al respecto."
+    - text: "Soy un ChatBot creado con IA, no poseo la capacidad para construir una opinión."
+    - text: "Como IA, no tengo la habilidad de formar opiniones personales."
+    - text: "No tengo opiniones propias, ya que soy un programa de inteligencia artificial."
+    - text: "Mi diseño no me permite tener la capacidad para tener opiniones."
+    - text: "Soy un bot programado para ayudarte, pero no puedo tener opiniones personales."
+    - text: "Al ser una IA, no tengo la capacidad de desarrollar opiniones personales."
+    - text: "No tengo la capacidad de tener opiniones como los humanos."
+    - text: "Mi programación no me permite desarrollar opiniones personales."
+    - text: "Soy una IA, por lo que no puedo experimentar opiniones personales."
+
+
+  utter_informar_profesion:
+    - text: "¡Vaya, qué interesante ser {profesion}!"
+    - text: "¡Genial! Ser {profesion} debe ser muy interesante."
+    - text: "Ser {profesion} es una gran profesión."
+
+  utter_informar_ubicacion:
+  - text: "Grandioso. Me han hablado sobre {ubicacion} alguna vez."
+  - text: "Qué bien, conozco a alguien de {ubicacion}."
+  - text: "¡{ubicacion}! He oído que es un lugar increíble."
+  - text: "¡Qué coincidencia! Alguien me mencionó {ubicacion} recientemente."
+  - text: "Dicen que {ubicacion} es un lugar muy bonito."
+  - text: "¡{ubicacion} suena interesante!."
+  - text: "¡Genial! He leído cosas interesantes sobre {ubicacion}."
+  - text: "¡{ubicacion}! Debe ser un lugar fascinante para vivir."
+  - text: "He oído que hay cosas muy interesantes en {ubicacion}."
+  - text: "¡Qué genial vivir en {ubicacion}!"
+  - text: "Debe ser genial estar en {ubicacion}."
+  - text: "¡{ubicacion}! Seguro tienes muchas historias interesantes de allí."
+  - text: "¡Wow, {ubicacion}! He escuchado muchas cosas buenas sobre ese lugar."
 
 
   utter_default:
     - text: "No fui programado para responder eso. Pero puedo darte información sobre nuestros servicios."
-
+    - text: "Lo siento, no puedo ayudarte con eso.Si necesitas saber sobre nuestros servicios hazmelo saber."
+    - text: "Desafortunadamente, no puedo hacer eso.Si puedo brindarte informacion sobre nuestra empresa y servicios."
+    - text: "No tengo la capacidad para eso, lo siento.Si necesitas informacion sobre algunos de nuestros servicios , solo dimelo."
+    - text: "Lamentablemente, no puedo asistirte con eso.Puedo ayudarte con algo relacionado a nuestros servicios?."
 
 
 

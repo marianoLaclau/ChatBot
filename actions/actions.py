@@ -2,6 +2,8 @@ from typing import Any, Text, Dict, List
 from datetime import datetime
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+import requests
+
 
 
 class ActionProveerInformacion(Action):
@@ -92,8 +94,34 @@ class ActionProveerClima(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
+        api_key = "806dd52b94a3bb14b5345bb4ac8a7497"  # Reemplaza esto con tu API Key de OpenWeatherMap
+        base_url = "http://api.openweathermap.org/data/2.5/weather"
+        
+        # Obtener la ubicación del slot
         ubicacion = tracker.get_slot('ubicacion')
-        dispatcher.utter_message(text=f"El clima en {ubicacion} es soleado.")  # Aquí podrías integrar con una API de clima
+        
+        if ubicacion is None:
+            dispatcher.utter_message(text="No he podido obtener la ubicación. ¿Puedes repetirla, por favor?")
+            return []
+
+        # Construir la URL completa para la solicitud
+        complete_url = f"{base_url}?q={ubicacion}&appid={api_key}&units=metric&lang=es"
+        
+        # Hacer la solicitud a la API
+        response = requests.get(complete_url)
+        data = response.json()
+        
+        # Verificar si se ha encontrado la ciudad
+        if data["cod"] != "404":
+            main = data["main"]
+            weather = data["weather"][0]
+            temperatura = main["temp"]
+            descripcion = weather["description"]
+            ubicacion = ubicacion.title()
+            dispatcher.utter_message(text=f"El clima en {ubicacion} es: {descripcion}, con una temperatura de {temperatura}°C.")
+        else:
+            dispatcher.utter_message(text=f"No he podido encontrar el clima para la ubicación: {ubicacion}. Por favor, verifica el nombre de la ciudad.")
+        
         return []
     
 

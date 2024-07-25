@@ -11,8 +11,15 @@ stories:
 
 - story: proporcionar nombre y pedir información
   steps:
-  - intent: informar
+  - intent: informar_nombre
   - action: utter_informar_nombre
+  - intent: pedir_informacion
+  - action: action_proveer_informacion
+
+- story: proporcionar profesion y pedir información
+  steps:
+  - intent: informar_profesion
+  - action: utter_informar_profesion
   - intent: pedir_informacion
   - action: action_proveer_informacion
 
@@ -33,7 +40,7 @@ stories:
 - story: afirmar y preguntar hora
   steps:
   - intent: afirmar
-  - action: utter_affirmar
+  - action: utter_afirmar
   - intent: preguntar_hora
   - action: action_proveer_hora
 
@@ -106,3 +113,9 @@ stories:
   - intent: nlu_fallback
   - action: utter_default
   
+- story: proporcionar ubicacion y pedir información
+  steps:
+  - intent: informar_ubicacion
+  - action: utter_informar_ubicacion
+  - intent: pedir_informacion
+  - action: action_proveer_informacion
