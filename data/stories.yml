@@ -101,4 +101,8 @@ stories:
   - intent: preguntar_opinion
   - action: utter_preguntar_opinion
 
+- story: fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
   

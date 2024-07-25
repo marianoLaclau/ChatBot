@@ -141,7 +141,7 @@ responses:
   - text: "Mi programación no me permite desarrollar gustos o preferencias."
   - text: "Soy una IA, por lo que no puedo experimentar gustos o preferencias personales."
 
-  utter_preguntar_opinion:
+
   utter_preguntar_opinion:
   - text: "Soy un ChatBot creado con IA, no poseo una opinión formada al respecto."
   - text: "Soy un ChatBot creado con IA, no poseo la capacidad para construir una opinión."
@@ -153,6 +153,10 @@ responses:
   - text: "No tengo la capacidad de tener opiniones como los humanos."
   - text: "Mi programación no me permite desarrollar opiniones personales."
   - text: "Soy una IA, por lo que no puedo experimentar opiniones personales."
+
+
+  utter_default:
+    - text: "No fui programado para responder eso. Pero puedo darte información sobre nuestros servicios."
 
 
 

@@ -27,5 +27,8 @@ policies:
   max_history: 5
   epochs: 100
 - name: RulePolicy
+  core_fallback_action_name: "action_default_fallback"
+  core_fallback_threshold: 0.3
+  nlu_threshold: 0.3
 
 assistant_id: 20240722-105105-soft-spirit
