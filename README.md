@@ -23,7 +23,9 @@ cd chatbot-nlp-experimental
 ### Crea un entorno virtual:
 
 python3.9 -m venv rasa_env
-source rasa_env/bin/activate  # En Windows: rasa_env\Scripts\activate
+
+source rasa_env/bin/activate  
+En Windows: rasa_env\Scripts\activate
 
 ### Instala las dependencias:
 
