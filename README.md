@@ -18,6 +18,7 @@ Este es un proyecto experimental de ChatBot basado en Procesamiento de Lenguaje 
 ### Clona el repositorio:
 
 git clone https://github.com/tu_usuario/chatbot-nlp-experimental.git
+
 cd chatbot-nlp-experimental
 
 ### Crea un entorno virtual:
