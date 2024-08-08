@@ -1,5 +1,5 @@
 # ChatBot NLP Experimental Creado con Rasa
-Este es un proyecto experimental de ChatBot basado en Procesamiento de Lenguaje Natural (NLP) creado con Rasa. El objetivo de este chatbot es proporcionar respuestas naturales y contextuales a las consultas de los usuarios, y puede ser adaptado para diferentes empresas y servicios.
+Este es un proyecto experimental de ChatBot basado en Procesamiento de Lenguaje Natural (NLP) creado con Rasa.**Esta en fase de desarrollo**. El objetivo de este chatbot es proporcionar respuestas naturales y contextuales a las consultas de los usuarios, y puede ser adaptado para diferentes empresas y servicios.
 
 ## Características
 * Respuestas predefinidas para preguntas comunes.
