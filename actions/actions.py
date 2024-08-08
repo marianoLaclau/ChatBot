@@ -94,7 +94,7 @@ class ActionProveerClima(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        api_key = "806dd52b94a3bb14b5345bb4ac8a7497"  # Reemplaza esto con tu API Key de OpenWeatherMap
+        api_key = "806dd52b94a3bb14b5345bb4ac8a7497"  # API Key de OpenWeatherMap
         base_url = "http://api.openweathermap.org/data/2.5/weather"
         
         # Obtener la ubicación del slot
